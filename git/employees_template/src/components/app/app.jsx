@@ -1,6 +1,6 @@
-import { Component } from "react";
+import React from 'react';
+import { Component } from 'react';
 
-import React from "react";
 import AppInfo from '../app-info/app-info';
 import SearchPanel from '../search-panel/search-panel';
 import AppFilter from '../app-filter/app-filter';
@@ -13,10 +13,10 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data :[
-                {name: 'John C.', salary: 800, increase: false, id:1},
-                {name: 'Alex M.', salary: 3000, increase: true, id: 2},
-                {name: 'Carl W.', salary: 5000, increase: false,id: 3}
+            data: [
+                {name: 'John C.', salary: 800, increase: false, rise: true, id: 1},
+                {name: 'Alex M.', salary: 3000, increase: true, rise: false, id: 2},
+                {name: 'Carl W.', salary: 5000, increase: false, rise: false, id: 3}
             ]
         }
         this.maxId = 4;
@@ -25,11 +25,12 @@ class App extends Component {
     deleteItem = (id) => {
         this.setState(({data}) => {
             return {
-                data: data.filter(item => item.id !==id)
+                data: data.filter(item => item.id !== id)
             }
         })
     }
 
+    // Да, пока могут добавляться пустые пользователи. Мы это еще исправим
     addItem = (name, salary) => {
         const newItem = {
             name, 
@@ -41,20 +42,48 @@ class App extends Component {
         this.setState(({data}) => {
             const newArr = [...data, newItem];
             return {
-                newArr
+                data: newArr
             }
         });
     }
+
     onToggleProp = (id, prop) => {
         this.setState(({data}) => ({
             data: data.map(item => {
-                if(item.id === id) {
+                if (item.id === id) {
                     return {...item, [prop]: !item[prop]}
                 }
-                return item
+                return item;
             })
         }))
     }
+
+
+    // onToggleIncrease = (id) => {
+    //     this.setState(({data}) => ({
+    //     data : data.map(item => {
+    //         if(item.id === id){
+    //             return {...item, increase: !item.increase}
+    //         }
+    //         return item
+    //     })
+    //     }))
+    // }
+
+
+    // onToggleRise = (id) => {
+    //     this.setState(({data}) => ({
+    //         data : data.map(item => {
+    //             if(item.id === id){
+    //                 return {...item, rise: !item.rise}
+    //             }
+    //             return item
+    //         })
+    //         }))
+    // }
+
+
+
 
     render() {
         const employees = this.state.data.length;
@@ -71,7 +100,8 @@ class App extends Component {
                 <EmployeesList 
                     data={this.state.data}
                     onDelete={this.deleteItem}
-                    onToggleProp={this.onToggleProp}/>
+                    onToggleProp={this.onToggleProp}
+                    />
                 <EmployeesAddForm onAdd={this.addItem}/>
             </div>
         );
