@@ -1,8 +1,10 @@
 .app-list {
     margin-top: 30px;
-    background-color: #3d5a80;
+    background-color: #f3f5f6;
     border-radius: 4px;
-    box-shadow: 15px 15px 30px rgba(0,0,0, .15);
-    color: #fff;
+    box-shadow: 15px 15px 30px rgba(0,0,0, .2);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: normal;
+    color: rgb(218, 226, 242);
 }
 

@@ -1,6 +1,6 @@
 .list-group-item {
     padding: 15px 20px;
-    border-bottom: 1px solid #3d5a80;
+    border-bottom: 1px solid #2840ae;
 }
 
 .list-group-item:last-child {
@@ -31,11 +31,11 @@
 }
 
 .list-group-item .btn-cookie {
-    color: #e09f3e;
+    color: #ffac2f;
 }
 
 .list-group-item .btn-trash {
-    color: #e5383b;
+    color: #ff3337;
 }
 
 .list-group-item .fa-star {
@@ -60,5 +60,5 @@
 }
   
 .list-group-item.increase .btn-star {
-    color: #aeaeae;
+    color: #cbd4af;
 }

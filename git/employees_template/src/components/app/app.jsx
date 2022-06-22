@@ -14,9 +14,9 @@ class App extends Component {
         super(props);
         this.state = {
             data: [
-                {name: 'John C.', salary: 800, increase: false, rise: true, id: 1},
-                {name: 'Alex M.', salary: 3000, increase: true, rise: false, id: 2},
-                {name: 'Carl W.', salary: 5000, increase: false, rise: false, id: 3}
+                {name: 'Ashley Fahey', salary: 800, increase: false, rise: true, id: 1},
+                {name: 'Jamie Edmonds', salary: 3000, increase: true, rise: false, id: 2},
+                {name: 'Martine Taylor', salary: 5000, increase: false, rise: false, id: 3}
             ],
             term : '',
             filter: 'all'
@@ -32,7 +32,6 @@ class App extends Component {
         })
     }
 
-    // Да, пока могут добавляться пустые пользователи. Мы это еще исправим
     addItem = (name, salary) => {
         const newItem = {
             name, 
