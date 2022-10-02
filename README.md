@@ -9,9 +9,6 @@ ___
 Разработчик: *[Папахина Ирина](https://github.com/PapakhinaIrina).*
 ____
 
-Данное приложение было создано при прохождение курса Ивана Петриченко ['*Полный курс по JavaScript + React - с нуля до результата*'
-](https://www.udemy.com/course/javascript_full/learn/lecture/14328446#overview)
-___
 
 ## Возможности приложения:
 
